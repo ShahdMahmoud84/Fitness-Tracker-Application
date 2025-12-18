@@ -8,6 +8,19 @@ package com.fitnesstracker.decorator;
  *
  * @author omnia zedan
  */
-public class CaloriesTrackerDecorator {
-    
+public class CaloriesTrackerDecorator extends WorkoutDecorator {
+
+    public CaloriesTrackerDecorator(Workout workout) {
+        super(workout);
+    }
+
+    @Override
+    public String getDescription() {
+        return workout.getDescription() ;
+    }
+
+    @Override
+    public double getCalories() {
+        return workout.getCalories() + 50;
+    }
 }
