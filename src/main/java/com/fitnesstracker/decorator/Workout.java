@@ -10,4 +10,6 @@ package com.fitnesstracker.decorator;
  */
 public interface Workout {
     
+    String getDescription();
+    double getCalories();
 }
