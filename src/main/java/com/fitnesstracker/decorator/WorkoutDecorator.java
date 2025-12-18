@@ -8,6 +8,21 @@ package com.fitnesstracker.decorator;
  *
  * @author omnia zedan
  */
-public class WorkoutDecorator {
-    
+public class WorkoutDecorator implements Workout {
+
+    protected Workout workout;
+
+    public WorkoutDecorator(Workout workout) {
+        this.workout = workout;
+    }
+
+    @Override
+    public String getDescription() {
+        return workout.getDescription();
+    }
+
+    @Override
+    public double getCalories() {
+        return workout.getCalories();
+    }
 }
